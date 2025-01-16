@@ -46,8 +46,8 @@ const Header = () => {
         backgroundColor: scrolling ? '#110430' : 'transparent',
         boxShadow: scrolling ? '0 2px 10px rgba(0, 0, 0, 0.2)' : 'none',
         transition: 'all 0.3s ease-in-out',
-        padding: scrolling ? '5px 0' : '20px 0', // Réduit la taille de la barre au scroll
-        zIndex: 1300, // Assurez-vous qu'il soit au-dessus des autres éléments
+        padding: scrolling ? '5px 0' : '20px 0',
+        zIndex: 1300,
       }}
     >
       <Toolbar sx={{ justifyContent: 'space-between' }}>
@@ -70,22 +70,33 @@ const Header = () => {
               edge="start"
               color="inherit"
               aria-label="menu"
-              onClick={toggleDrawer(true)}
+              onClick={() => setDrawerOpen(true)}
               sx={{ color: '#FFFDFE' }}
             >
               <MenuIcon />
             </IconButton>
-            <Drawer anchor="right" open={drawerOpen} onClose={toggleDrawer(false)}>
-              <Box
-                sx={{
+            <Drawer
+              anchor="right"
+              open={drawerOpen}
+              onClose={() => setDrawerOpen(false)}
+              sx={{
+                '& .MuiDrawer-paper': {
+                  backgroundColor: '#110430', // Color of the drawer
+                  color: '#FFFDFE', // Text color
                   width: 250,
-                  backgroundColor: '#110430',
+                  paddingTop: '60px', // Adjust to avoid overlap with the AppBar
+                },
+              }}
+            >
+              <Box
+                role="presentation"
+                onClick={() => setDrawerOpen(false)}
+                onKeyDown={() => setDrawerOpen(false)}
+                sx={{
                   height: '100%',
+                  backgroundColor: '#110430',
                   color: '#FFFDFE',
                 }}
-                role="presentation"
-                onClick={toggleDrawer(false)}
-                onKeyDown={toggleDrawer(false)}
               >
                 <List>
                   {navLinks.map((link, index) => (
@@ -121,7 +132,7 @@ const Header = () => {
                   fontWeight: 'bold',
                   transition: 'color 0.3s ease-in-out',
                   '&:hover': {
-                    color: '#EA4CB0', // Changer la couleur au hover pour effet dynamique
+                    color: '#EA4CB0',
                   },
                 }}
               >

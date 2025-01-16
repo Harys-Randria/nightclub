@@ -6,7 +6,7 @@ const MainSection = () => {
     <Box
       sx={{
         backgroundImage: `url('https://images.xceed.me/blog/wp-content/uploads/2016/08/29122435/ellenallien-1.jpg')`, 
-        backgroundSize: 'cover',
+        backgroundSize: { xs: 'contain', sm: 'cover' }, // Adjust image size for mobile
         backgroundPosition: 'center',
         backgroundAttachment: 'fixed', // Parallax effect
         color: '#FFFDFE',
@@ -18,6 +18,7 @@ const MainSection = () => {
         textAlign: 'center',
         padding: '20px',
         position: 'relative', // For layering effect
+        paddingTop: '60px'
       }}
     >
       <Typography

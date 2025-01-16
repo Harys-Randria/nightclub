@@ -9,6 +9,10 @@ const Contact = () => {
         color: '#FFFDFE', // Texte blanc
         minHeight: '100vh',
         padding: '50px 20px',
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        justifyContent: 'center',
       }}
     >
       {/* Titre de la page */}

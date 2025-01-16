@@ -1,5 +1,6 @@
 import React from 'react';
 import { Box, Typography, Grid, Card, CardContent, Button } from '@mui/material';
+import { keyframes } from '@emotion/react';
 import InquirySection from '../Home/InquirySection';
 
 const privatisationOptions = [
@@ -25,6 +26,11 @@ const privatisationOptions = [
   },
 ];
 
+const slideUp = keyframes`
+  0% { opacity: 0; transform: translateY(50px); }
+  100% { opacity: 1; transform: translateY(0); }
+`;
+
 const Privatisation = () => {
   return (
     <Box>
@@ -44,6 +50,7 @@ const Privatisation = () => {
             fontSize: { xs: '2.5rem', sm: '3.5rem', md: '4.5rem' },
             textTransform: 'uppercase',
             textShadow: '2px 2px 8px rgba(0, 0, 0, 0.8)',
+            animation: `${slideUp} 1s ease-out`,
           }}
         >
           PRIVATISATION
@@ -67,6 +74,7 @@ const Privatisation = () => {
             maxWidth: '900px',
             margin: '0 auto',
             textAlign: 'justify',
+            animation: `${slideUp} 1.5s ease-out`,
           }}
         >
           Situé au cœur d'Antananarivo, le <strong>PICO NIGHT CLUB</strong> est l'endroit idéal pour
@@ -103,6 +111,7 @@ const Privatisation = () => {
             textAlign: 'center',
             textTransform: 'uppercase',
             marginBottom: '40px',
+            animation: `${slideUp} 2s ease-out`,
           }}
         >
           Nos options de privatisation
@@ -127,6 +136,7 @@ const Privatisation = () => {
                     transform: 'translateY(-10px)',
                     boxShadow: '0px 6px 20px rgba(0, 0, 0, 0.7)',
                   },
+                  animation: `${slideUp} 2s ease-out`,
                 }}
               >
                 <CardContent>

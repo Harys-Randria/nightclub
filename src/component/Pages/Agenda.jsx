@@ -1,5 +1,6 @@
 import React from 'react';
 import { Box, Typography, Grid, Card, CardContent, CardMedia, Button } from '@mui/material';
+import { keyframes } from '@emotion/react'; 
 import InquirySection from '../Home/InquirySection';
 import image1 from '../../assets/image1.jpg';
 import image2 from '../../assets/image2.jpg';
@@ -9,60 +10,51 @@ const events = [
   {
     id: 1,
     title: "Soirée d'inauguration",
-    description: "Préparez-vous à une nuit inoubliable ! DJ KEKEZ est aux platines avec des invités mystères qui vous feront vibrer toute la soirée.",
+    description: "Préparez-vous à une nuit inoubliable ! DJ KEKEZ aux platines et des invités mystères qui vous feront vibrer toute la soirée.",
     date: "Samedi 18 Janvier 2025",
     image: image1, 
   },
   {
     id: 2,
     title: "Love Night – La Saint-Valentin en Émotion",
-    description: "Une soirée glamour pour célébrer l’amour et l’amitié, sous le signe de la musique et des bonnes vibes.",
+    description: "Une soirée glamour pour célébrer l’amour et l’amitié, avec une ambiance électrisante et une musique inoubliable.",
     date: "Vendredi 14 Février 2025",
     image: image2, 
   },
   {
     id: 3,
     title: "Club Party avec Picconight",
-    description: "Préparez vos meilleurs pas de danse, DJ KEKEZ débarque avec des invités surprises pour enflammer la nuit !",
+    description: "Préparez vos meilleurs pas de danse, DJ KEKEZ débarque avec des invités surprises pour enflammer la piste !",
     date: "Samedi 15 Février 2025",
     image: image3, 
   },
   {
     id: 4,
     title: "Soirée Années 80",
-    description: "Revivez les classiques des années 80 avec des DJ emblématiques et une ambiance rétro inoubliable.",
+    description: "Revivez les classiques des années 80 avec une ambiance rétro et des DJs cultes.",
     date: "Vendredi 21 Février 2025",
     image: "https://www.magazine-cerise.com/wp-content/uploads/2018/12/Maggys-Club-1080x675.jpg", 
   },
   {
     id: 5,
     title: "DJ International Night",
-    description: "Une soirée avec des performances de DJ internationaux qui vont faire vibrer le club.",
+    description: "Une soirée épique avec des performances de DJ internationaux qui vont faire vibrer le club.",
     date: "Samedi 22 Février 2025",
     image: "https://www.fccv.biz/wp-content/uploads/2020/07/Festival-DJ-Lyon-28.jpg", 
   },
   {
     id: 6,
     title: "Soirée Neon Glow",
-    description: "Habillez-vous en blanc ou en néon et préparez-vous à briller toute la nuit sous des lumières UV.",
+    description: "Habillez-vous en néon et préparez-vous à briller toute la nuit sous des lumières UV incroyables.",
     date: "Vendredi 28 Février 2025",
     image: "https://megamix64.fr/wp-content/uploads/2024/11/fluo-party.jpg", 
   },
-  {
-    id: 7,
-    title: "LA FRENCH TOUCH",
-    description: "Ce samedi soir on retourne le Loft comme à notre habitude !",
-    date: "Samedi 01 Mars 2025",
-    image: "https://www.loftclub.fr/public/img/big/FrenchsansdatesA4png_677cf0b40dbc8.png", // Remplacez par une URL réelle
-  },
-  {
-    id: 8,
-    title: "SOIREE ETUDIANTE",
-    description: "La soirée est ouverte à tous les étudiants quelle que soit l'université ou l'école supérieure d'origine.",
-    date: "Vendredi 07 Mars 2025",
-    image: "https://www.loftclub.fr/public/img/big/MercrediTECHNOpng_677ea7e501685.png", // Remplacez par une URL réelle
-  },
 ];
+
+const slideUp = keyframes`
+  0% { opacity: 0; transform: translateY(50px); }
+  100% { opacity: 1; transform: translateY(0); }
+`;
 
 const Agenda = () => {
   return (
@@ -70,7 +62,7 @@ const Agenda = () => {
       {/* Section Titre et Description */}
       <Box
         sx={{
-          backgroundImage: `url('https://images.thebusinessplanshop.com/ouvrir-discotheque/ouvrir-une-boite-de-nuit.jpg')`, // Remplacez par une URL réelle
+          backgroundImage: `url('https://images.thebusinessplanshop.com/ouvrir-discotheque/ouvrir-une-boite-de-nuit.jpg')`, 
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           height: '400px',
@@ -80,6 +72,7 @@ const Agenda = () => {
           alignItems: 'center',
           color: '#FFFDFE',
           textAlign: 'center',
+          paddingTop: '60px', // Espacement sous la navbar fixe
         }}
       >
         <Typography
@@ -89,9 +82,10 @@ const Agenda = () => {
             fontSize: { xs: '2.5rem', sm: '3.5rem', md: '4.5rem' },
             textTransform: 'uppercase',
             textShadow: '2px 2px 8px rgba(0, 0, 0, 0.8)',
+            animation: `${slideUp} 1s ease-out`,
           }}
         >
-          Agenda Événements
+          Agenda des Événements
         </Typography>
         <Typography
           variant="body1"
@@ -102,16 +96,15 @@ const Agenda = () => {
             margin: '20px auto',
             lineHeight: 1.8,
             textShadow: '1px 1px 4px rgba(0, 0, 0, 0.7)',
+            animation: `${slideUp} 1.5s ease-out`,
           }}
         >
-          Rejoignez-nous pour des soirées inoubliables au Pico Night Club ! Plongez dans une ambiance
-          électrique avec des DJ internationaux, des événements thématiques et une énergie
-          vibrante. Soyez au cœur de la fête et créez des souvenirs qui dureront toute une vie.
+          Rejoignez-nous pour des soirées électrisantes au Pico Night Club ! Laissez-vous emporter par des événements inoubliables avec des DJ internationaux, des shows exclusifs et une ambiance de folie. Ne manquez pas ces moments magiques !
         </Typography>
       </Box>
 
       {/* Section Événements */}
-      <Box sx={{ padding: '50px 20px', backgroundColor: '#110430', color: '#FFFDFE' }}>
+      <Box sx={{ padding: '50px 20px', backgroundColor: '#1e1e1e', color: '#FFFDFE' }}>
         <Typography
           variant="h3"
           sx={{
@@ -120,6 +113,7 @@ const Agenda = () => {
             textAlign: 'center',
             textTransform: 'uppercase',
             marginBottom: '40px',
+            animation: `${slideUp} 2s ease-out`,
           }}
         >
           Événements à venir
@@ -129,30 +123,31 @@ const Agenda = () => {
             <Grid item xs={12} sm={6} md={4} key={event.id}>
               <Card
                 sx={{
-                  backgroundColor: '#1a103f',
+                  backgroundColor: '#2c2c2c',
                   color: '#FFFDFE',
-                  boxShadow: '0px 4px 15px rgba(0, 0, 0, 0.5)',
-                  borderRadius: '10px',
+                  boxShadow: '0px 4px 15px rgba(0, 0, 0, 0.6)',
+                  borderRadius: '15px',
                   transition: 'transform 0.3s, box-shadow 0.3s',
                   '&:hover': {
                     transform: 'scale(1.05)',
-                    boxShadow: '0px 6px 20px rgba(0, 0, 0, 0.7)',
+                    boxShadow: '0px 8px 30px rgba(0, 0, 0, 0.8)',
                   },
+                  animation: `${slideUp} 2s ease-out`,
                 }}
               >
                 <CardMedia
                   component="img"
-                  height="200"
+                  height="250"
                   image={event.image}
                   alt={event.title}
-                  sx={{ borderRadius: '10px 10px 0 0' }}
+                  sx={{ borderRadius: '15px 15px 0 0' }}
                 />
                 <CardContent>
                   <Typography
                     variant="h5"
                     sx={{
                       fontFamily: "'Bebas Neue', sans-serif",
-                      fontSize: '1.5rem',
+                      fontSize: '1.8rem',
                       marginBottom: '10px',
                       textTransform: 'uppercase',
                     }}
@@ -193,7 +188,7 @@ const Agenda = () => {
                       },
                     }}
                   >
-                    Billeterie
+                    Réservez Maintenant
                   </Button>
                 </CardContent>
               </Card>
