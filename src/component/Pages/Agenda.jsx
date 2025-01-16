@@ -1,41 +1,65 @@
 import React from 'react';
 import { Box, Typography, Grid, Card, CardContent, CardMedia, Button } from '@mui/material';
 import InquirySection from '../Home/InquirySection';
+import image1 from '../../assets/image1.jpg';
+import image2 from '../../assets/image2.jpg';
+import image3 from '../../assets/image3.jpg';
 
 const events = [
   {
     id: 1,
-    title: "Soirée Années 80",
-    description: "Revivez les classiques des années 80 avec des DJ emblématiques et une ambiance rétro inoubliable.",
-    date: "Samedi 13 Janvier 2025",
-    image: "https://www.ville-arconnay.fr/wp-content/uploads/2024/01/Annees-80-1404x1080.jpg", // Remplacez par une URL réelle
+    title: "Soirée d'inauguration",
+    description: "Préparez-vous à une nuit inoubliable ! DJ KEKEZ est aux platines avec des invités mystères qui vous feront vibrer toute la soirée.",
+    date: "Samedi 18 Janvier 2025",
+    image: image1, 
   },
   {
     id: 2,
-    title: "DJ International Night",
-    description: "Une soirée avec des performances de DJ internationaux qui vont faire vibrer le club.",
-    date: "Vendredi 19 Janvier 2025",
-    image: "https://img.pikbest.com/origin/09/18/77/572pIkbEsTNwd.jpg!w700wp", // Remplacez par une URL réelle
+    title: "Love Night – La Saint-Valentin en Émotion",
+    description: "Une soirée glamour pour célébrer l’amour et l’amitié, sous le signe de la musique et des bonnes vibes.",
+    date: "Vendredi 14 Février 2025",
+    image: image2, 
   },
   {
     id: 3,
-    title: "Soirée Neon Glow",
-    description: "Habillez-vous en blanc ou en néon et préparez-vous à briller toute la nuit sous des lumières UV.",
-    date: "Samedi 27 Janvier 2025",
-    image: "https://megamix64.fr/wp-content/uploads/2024/11/fluo-party.jpg", // Remplacez par une URL réelle
+    title: "Club Party avec Picconight",
+    description: "Préparez vos meilleurs pas de danse, DJ KEKEZ débarque avec des invités surprises pour enflammer la nuit !",
+    date: "Samedi 15 Février 2025",
+    image: image3, 
   },
   {
     id: 4,
-    title: "LA FRENCH TOUCH",
-    description: "Ce samedi soir on retourne le Loft comme à notre habitude !",
-    date: "Samedi 10 Février 2025",
-    image: "https://www.loftclub.fr/public/img/big/FrenchsansdatesA4png_677cf0b40dbc8.png", // Remplacez par une URL réelle
+    title: "Soirée Années 80",
+    description: "Revivez les classiques des années 80 avec des DJ emblématiques et une ambiance rétro inoubliable.",
+    date: "Vendredi 21 Février 2025",
+    image: "https://www.magazine-cerise.com/wp-content/uploads/2018/12/Maggys-Club-1080x675.jpg", 
   },
   {
     id: 5,
+    title: "DJ International Night",
+    description: "Une soirée avec des performances de DJ internationaux qui vont faire vibrer le club.",
+    date: "Samedi 22 Février 2025",
+    image: "https://www.fccv.biz/wp-content/uploads/2020/07/Festival-DJ-Lyon-28.jpg", 
+  },
+  {
+    id: 6,
+    title: "Soirée Neon Glow",
+    description: "Habillez-vous en blanc ou en néon et préparez-vous à briller toute la nuit sous des lumières UV.",
+    date: "Vendredi 28 Février 2025",
+    image: "https://megamix64.fr/wp-content/uploads/2024/11/fluo-party.jpg", 
+  },
+  {
+    id: 7,
+    title: "LA FRENCH TOUCH",
+    description: "Ce samedi soir on retourne le Loft comme à notre habitude !",
+    date: "Samedi 01 Mars 2025",
+    image: "https://www.loftclub.fr/public/img/big/FrenchsansdatesA4png_677cf0b40dbc8.png", // Remplacez par une URL réelle
+  },
+  {
+    id: 8,
     title: "SOIREE ETUDIANTE",
     description: "La soirée est ouverte à tous les étudiants quelle que soit l'université ou l'école supérieure d'origine.",
-    date: "Samedi 17 Février 2025",
+    date: "Vendredi 07 Mars 2025",
     image: "https://www.loftclub.fr/public/img/big/MercrediTECHNOpng_677ea7e501685.png", // Remplacez par une URL réelle
   },
 ];

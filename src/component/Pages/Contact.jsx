@@ -57,8 +57,8 @@ const Contact = () => {
             lineHeight: 1.8,
           }}
         >
-          <strong>Adresse :</strong> Rue de la Nuit, Antananarivo, Madagascar<br />
-          <strong>Téléphone :</strong> +261 34 12 34 56<br />
+          <strong>Adresse :</strong> Antanimena, Antananarivo, Madagascar<br />
+          <strong>Téléphone :</strong> +261 32 02 202 20<br />
           <strong>E-mail :</strong> contact@piconightclub.mg
         </Typography>
       </Box>

@@ -40,15 +40,10 @@ const BiographySection = () => {
               margin: '0 auto',
             }}
           >
-            Depuis plus de 25 ans, le <strong>Pico Night Club</strong> est l'épicentre des nuits les
-            plus mémorables. Avec une ambiance électrique, des DJ internationaux et une clientèle
-            jeune et branchée, notre boîte est bien plus qu’un lieu de fête. C'est une institution
-            où la musique, les lumières, et les âmes vibrent en parfaite harmonie. 💃
+            Depuis son ouverture récente, le Pico Night Club s'impose déjà comme l'épicentre des nuits les plus mémorables. Avec une ambiance électrique, des DJ internationaux et une clientèle jeune et branchée, notre boîte est bien plus qu’un lieu de fête : c'est une nouvelle destination où la musique, les lumières et les âmes vibrent en parfaite harmonie. 💃
             <br />
             <br />
-            Situé au cœur de la ville, le Pico Night Club est l'endroit où chaque nuit devient une
-            légende. Rejoignez-nous pour vivre des soirées inoubliables, des moments magiques, et
-            une énergie que vous ne trouverez nulle part ailleurs. 🌟
+            Idéalement situé au cœur de la ville, le Pico Night Club transforme chaque soirée en légende. Venez découvrir des nuits inoubliables, des moments magiques, et une énergie unique que vous ne trouverez nulle part ailleurs. 🌟
           </Typography>
         </Grid>
 

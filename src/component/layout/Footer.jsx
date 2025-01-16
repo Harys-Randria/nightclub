@@ -6,8 +6,8 @@ const Footer = () => {
   return (
     <Box
       sx={{
-        backgroundColor: '#110430', // Fond violet
-        color: '#FFFDFE', // Texte blanc
+        backgroundColor: '#110430',
+        color: '#FFFDFE',
         textAlign: 'center',
         padding: '40px 20px',
         position: 'relative',
@@ -26,6 +26,7 @@ const Footer = () => {
           borderRadius: '50%',
           opacity: 0.3,
           zIndex: 0,
+          animation: 'pulse 10s infinite', // Animation dynamique de pulsation
         }}
       />
       <Box
@@ -39,6 +40,7 @@ const Footer = () => {
           borderRadius: '50%',
           opacity: 0.3,
           zIndex: 0,
+          animation: 'pulse 10s infinite reverse', // Animation dynamique opposée
         }}
       />
 
@@ -52,6 +54,7 @@ const Footer = () => {
             textTransform: 'uppercase',
             marginBottom: '20px',
             textShadow: '2px 2px 8px rgba(0, 0, 0, 0.7)',
+            animation: 'fadeIn 2s ease-out',
           }}
         >
           Pico Night Club
@@ -62,7 +65,7 @@ const Footer = () => {
           {/* Adresse et Contact */}
           <Grid item xs={12} sm={6}>
             <Typography variant="body1" sx={{ fontSize: '1.2rem' }}>
-              Adresse: Rue de la nuit, ANTANANARIVO
+              Adresse: Antanimena, ANTANANARIVO
             </Typography>
             <Typography
               variant="body2"
@@ -129,6 +132,7 @@ const Footer = () => {
             fontFamily: "'Bebas Neue', sans-serif",
             fontSize: '1.2rem',
             marginBottom: '10px',
+            animation: 'fadeIn 2s ease-out 0.5s',
           }}
         >
           Suivez-nous sur
@@ -138,7 +142,15 @@ const Footer = () => {
             component="a"
             href="https://www.facebook.com/"
             target="_blank"
-            sx={{ color: '#FFFDFE', margin: '0 10px', transition: 'transform 0.3s', '&:hover': { transform: 'scale(1.2)' } }}
+            sx={{
+              color: '#FFFDFE',
+              margin: '0 10px',
+              transition: 'transform 0.3s, color 0.3s',
+              '&:hover': {
+                transform: 'scale(1.3)',
+                color: '#3b5998', // Changer la couleur au survol
+              },
+            }}
           >
             <Facebook />
           </IconButton>
@@ -146,7 +158,15 @@ const Footer = () => {
             component="a"
             href="https://www.instagram.com/"
             target="_blank"
-            sx={{ color: '#FFFDFE', margin: '0 10px', transition: 'transform 0.3s', '&:hover': { transform: 'scale(1.2)' } }}
+            sx={{
+              color: '#FFFDFE',
+              margin: '0 10px',
+              transition: 'transform 0.3s, color 0.3s',
+              '&:hover': {
+                transform: 'scale(1.3)',
+                color: '#E4405F',
+              },
+            }}
           >
             <Instagram />
           </IconButton>
@@ -154,7 +174,15 @@ const Footer = () => {
             component="a"
             href="https://twitter.com/"
             target="_blank"
-            sx={{ color: '#FFFDFE', margin: '0 10px', transition: 'transform 0.3s', '&:hover': { transform: 'scale(1.2)' } }}
+            sx={{
+              color: '#FFFDFE',
+              margin: '0 10px',
+              transition: 'transform 0.3s, color 0.3s',
+              '&:hover': {
+                transform: 'scale(1.3)',
+                color: '#1DA1F2',
+              },
+            }}
           >
             <Twitter />
           </IconButton>
@@ -162,7 +190,15 @@ const Footer = () => {
             component="a"
             href="https://www.youtube.com/"
             target="_blank"
-            sx={{ color: '#FFFDFE', margin: '0 10px', transition: 'transform 0.3s', '&:hover': { transform: 'scale(1.2)' } }}
+            sx={{
+              color: '#FFFDFE',
+              margin: '0 10px',
+              transition: 'transform 0.3s, color 0.3s',
+              '&:hover': {
+                transform: 'scale(1.3)',
+                color: '#FF0000',
+              },
+            }}
           >
             <YouTube />
           </IconButton>

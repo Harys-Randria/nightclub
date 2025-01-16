@@ -5,26 +5,29 @@ const MainSection = () => {
   return (
     <Box
       sx={{
-        backgroundImage: `url('https://images.xceed.me/blog/wp-content/uploads/2016/08/29122435/ellenallien-1.jpg')`, // Remplace par ton image
+        backgroundImage: `url('https://images.xceed.me/blog/wp-content/uploads/2016/08/29122435/ellenallien-1.jpg')`, 
         backgroundSize: 'cover',
         backgroundPosition: 'center',
+        backgroundAttachment: 'fixed', // Parallax effect
         color: '#FFFDFE',
-        height: '100vh', // Remplit toute la hauteur de l'écran
+        height: '100vh',
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
         justifyContent: 'center',
         textAlign: 'center',
         padding: '20px',
+        position: 'relative', // For layering effect
       }}
     >
       <Typography
         variant="h3"
         gutterBottom
         sx={{
-          fontFamily: "'Bebas Neue', sans-serif", // Police festive
-          fontSize: { xs: '2rem', sm: '4rem', md: '5rem' }, // Responsivité
-          textShadow: '2px 2px 5px rgba(0, 0, 0, 0.8)', // Ajout d'un effet de texte
+          fontFamily: "'Bebas Neue', sans-serif",
+          fontSize: { xs: '2rem', sm: '4rem', md: '5rem' },
+          textShadow: '2px 2px 8px rgba(0, 0, 0, 0.8)',
+          animation: 'fadeIn 2s ease-out', // Fade-in animation for title
         }}
       >
         Bienvenue au PICO NIGHT CLUB
@@ -35,11 +38,13 @@ const MainSection = () => {
         sx={{
           fontFamily: "'Open Sans', sans-serif",
           fontSize: { xs: '1rem', sm: '1.5rem' },
-          maxWidth: '600px', // Limite la largeur du texte
-          textShadow: '1px 1px 3px rgba(0, 0, 0, 0.7)',
+          maxWidth: '600px',
+          textShadow: '1px 1px 6px rgba(0, 0, 0, 0.7)',
+          opacity: 0.8,
+          animation: 'fadeIn 2s ease-out 0.5s', // Fade-in for paragraph
         }}
       >
-        L'institution Matlgache, offrant des soirées inoubliables avec une ambiance survoltée.
+        L'institution Malgache, offrant des soirées inoubliables avec une ambiance survoltée.
       </Typography>
       <Button
         variant="contained"
@@ -51,15 +56,31 @@ const MainSection = () => {
           textTransform: 'uppercase',
           fontWeight: 'bold',
           borderRadius: '30px',
-          boxShadow: '0px 4px 10px rgba(0, 0, 0, 0.3)',
+          boxShadow: '0px 4px 15px rgba(0, 0, 0, 0.4)',
           ':hover': {
             backgroundColor: '#D13D9A',
+            transform: 'scale(1.05)', // Dynamic scaling effect on hover
+            boxShadow: '0px 6px 20px rgba(0, 0, 0, 0.5)',
           },
-          marginTop: '20px',
+          marginTop: '30px',
+          transition: 'all 0.3s ease-in-out', // Smooth transition for hover effect
         }}
       >
         Découvrir nos événements
       </Button>
+
+      {/* Adding dynamic background gradient */}
+      <Box
+        sx={{
+          position: 'absolute',
+          top: 0,
+          left: 0,
+          right: 0,
+          bottom: 0,
+          background: 'linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0.5))',
+          zIndex: -1, // To keep the background behind content
+        }}
+      />
     </Box>
   );
 };
